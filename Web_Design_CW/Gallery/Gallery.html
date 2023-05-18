@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="Gallery.css">
+</head>
+
+<body>
+    <video src="/Gallery/Media/Background.mp4" autoplay muted loop id="background-video"></video>
+    <nav>
+        <a href="/Index/Index.html"><img src="/Gallery/Media/Logo.png" alt="Logo"></a>
+        <div class="customizers">
+            <button id="small" onclick="changeFontSize('small')">S</button>
+            <button id="medium" onclick="changeFontSize('medium')">M</button>
+            <button id="large" onclick="changeFontSize('large')">L</button>
+            <button id="light" onclick="changeColorTheme('light')">☼</button>
+            <button id="dark" onclick="changeColorTheme('dark')">☾</button>
+            <button id="blue" onclick="changeColorTheme('blue')">❄</button>
+        </div>
+        <ul>
+			<li><a href="/Index/Index.html">Home</a></li>
+			<li><a href="/Comments/Comments.html">Comments</a></li>
+			<li><a href="/shop/shop/index.html">Buy Products</a></li>
+			<li><a href="/Student_3/quiz.html">Quiz</a></li>
+			<li><a href="/Student_3/student-details.html">Student Details</a></li>
+			<li><a href="/Sitemap/Sitemap.html">Sitemap</a></li>
+			<li><a href="/Gallery/Gallery.html">Gallery</a></li>
+		</ul>
+    </nav>
+    <header>
+		<h1>Gallery</h1>
+	</header>
+    <div class="container">
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-image">
+                    <img id="popup-img" src="" alt="">
+                </div>
+                <div class="popup-description">
+                    <p id="popup-text"></p>
+                </div>
+                <a href="#" class="close" onclick="closePopup()">&times;</a>
+            </div>
+        </div>
+        <div class="gallery">
+            <img src="/Gallery/Media/01.jpg" alt="Image 1" data-description="After being prevented from taking a run by bowler Dennis Lillee, Pakistan's Javed Miandad lifts his bat in rage." onclick="openPopup(this.src, 'Description of image 1')">
+            <img src="/Gallery/Media/02.jpg" alt="Image 2" data-description="Following a test match in 2004 in which he scored a record 400 runs, West Indian Brian Lara kissed the ground." onclick="openPopup(this.src, 'Description of image 2')">
+            <img src="/Gallery/Media/03.jpg" alt="Image 3" data-description="Steve Smith of Australia, a previous teammate who passed away during the current series, dedicates his innings to Phil Hughes." onclick="openPopup(this.src, 'Description of image 3')">
+            <img src="/Gallery/Media/04.jpg" alt="Image 4" data-description="This is how Galle, Sri Lanka's renowned cricket stadium appeared following the 2004 Indian Ocean Tsunami, which completely destroyed it." onclick="openPopup(this.src, 'Description of image 4')">
+            <img src="/Gallery/Media/05.jpeg" alt="Image 5" data-description="Javed Miandad of Pakistan expresses his annoyance in this manner after becoming agitated by the actions of Indian wicketkeeper Kiran More." onclick="openPopup(this.src, 'Description of image 5')">
+            <img src="/Gallery/Media/06.jpg" alt="Image 6" data-description="16th January 1926: The referee tosses up on a snow-covered football pitch at the start of the football match between Arsenal and Manchester United at Highbury." onclick="openPopup(this.src, 'Description of image 6')">
+            <img src="/Gallery/Media/07.jpg" alt="Image 7" data-description="Leicester City goalkeeper Gordon Banks puts his reflexes to the test by saving a dog during a match against Manchester United at Filbert Street on 13 November 1965." onclick="openPopup(this.src, 'Description of image 7')">
+            <img src="/Gallery/Media/08.jpg" alt="Image 8" data-description="Man United's Ryan Giggs wheels away in celebration after scoring a dramatic winner to defeat Arsenal 2-1 in extra time during the 1999 FA Cup semi-final Replay on 14 April 1999 at Villa Park." onclick="openPopup(this.src, 'Description of image 8')">
+            <img src="/Gallery/Media/09.jpg" alt="Image 9" data-description="Ole Gunnar Solskjaer celebrates after scoring the winning goal in the UEFA Champions League final for Manchester United against Bayern Munich at the Camp Nou in 1999" onclick="openPopup(this.src, 'Description of image 9')">
+            <img src="/Gallery/Media/10.jpg" alt="Image 10" data-description="I think this young Feyenoord fan, pictured at the UEFA Cup final between Feyenoord and Borussia Dortmund played at the De Kuip Stadium in 2002, has made his feelings pretty clear." onclick="openPopup(this.src, 'Description of image 10')">
+            <img src="/Gallery/Media/11.jpg" alt="Image 11" data-description="Tom Williams of Harlequins trudges off as blood pours from his mouth during the Heineken Cup Quarter Final against Leinster. It turned out the blood was, in fact, fake as Quins looked to make a tactical substitution" onclick="openPopup(this.src, 'Description of image 11')">
+            <img src="/Gallery/Media/12.jpg" alt="Image 12" data-description="Nobody will ever forget the day Japan beat South Africa at the 2015 Rugby World Cup." onclick="openPopup(this.src, 'Description of image 12')">
+            <img src="/Gallery/Media/13.jpg" alt="Image 13" data-description="The most iconic rugby image in France is probably this one: Jean-Pierre Rives covered in blood in 1983 against Wales." onclick="openPopup(this.src, 'Description of image 13')">
+            <img src="/Gallery/Media/14.jpg" alt="Image 14" data-description="George North's fireman's lift on the giant Israel Folau was the iconic moment of the 2013 Lions tour" onclick="openPopup(this.src, 'Description of image 14')">
+            <img src="/Gallery/Media/15.jpg" alt="Image 15" data-description="A picture we've all seen a million times as Jonah Lomu rampages through the England defence at the 1995 Rugby World Cup to score that iconic try." onclick="openPopup(this.src, 'Description of image 15')">
+            <img src="/Gallery/Media/16.jpg" alt="Image 16" data-description="This iconic pose of Jerry West, taken in 1970 in a game against the Portland Trail Blazers" onclick="openPopup(this.src, 'Description of image 16')">
+            <img src="/Gallery/Media/17.jpg" alt="Image 17" data-description="March 2, 1962, the greatest scoring achievement in NBA history. Harvey Pollack who grabbed a sheet of paper from a reporter and wrote down Wilt Chamberlain's unprecedented point total" onclick="openPopup(this.src, 'Description of image 17')">
+            <img src="/Gallery/Media/18.jpg" alt="Image 18" data-description="This is the best action shot of Kobe Bryant, when he was young and dedicated to making noise in the league. This shot captures this moment in his career, literally beginning to take off in 1998." onclick="openPopup(this.src, 'Description of image 18')">
+            <img src="/Gallery/Media/19.jpg" alt="Image 19" data-description="This shot from 1977 is nothing less than the transformation of the sport. Julius Erving took basketball above the rim in the 1970s" onclick="openPopup(this.src, 'Description of image 19')">
+            <img src="/Gallery/Media/20.jpg" alt="Image 20" data-description="Capping the pinnacle of Vince Carter's dunk over Frederic Weis in the 2000 Games as Kevin Garnett and Gary Payton look on in awe/disbelief, it's the most necessary NBA photo since Wilt's 100." onclick="openPopup(this.src, 'Description of image 20')">
+        </div>
+
+    </div>
+
+    <footer>
+		<div class="footer-content">
+			<p>&copy; 2023 SportSpot</p>
+			<p class="editor">Creator :<a href="/Editor Dineth/dineth.html"><span>Dineth S</span></a></p>
+		</div>
+	</footer>
+
+    <script src="/Gallery/Gallery.js"></script>
+</body>
+
+</html>

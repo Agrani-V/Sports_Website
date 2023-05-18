@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Comments.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="Comments.js"></script>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Styling for footer */
+footer {
+			position: fixed;
+			align-items: center;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.4);
+			color: white;
+		}
+
+		.footer-content {
+			display: flex;
+			justify-content: space-between;
+			padding: 0px 10px;
+		}
+
+		.editor a {
+			text-align: right;
+			color: white;
+			text-decoration: none;
+			
+		}
+
+		span{
+			transition: 1s;
+		}
+
+		span:hover {
+			color: yellow;
+		}
+    /* Styling for navigation bar */
+		nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.7);
+			height: 80px;
+			padding: 0 20px;
+			z-index: 9999;
+			transition: background-color 0.2s;
+		}
+
+		nav img {
+			height: 90px;
+			margin-right: 20px;
+			cursor: pointer;
+		}
+
+		nav ul{
+			flex: 1;
+			text-align: right;
+			padding-right: 30px;
+		}
+
+		nav ul li{
+			list-style-type: none;
+			display:inline-block;
+			padding: 10px 2px;
+		}
+
+		nav ul li a {
+			color: white;
+			text-decoration:none;
+      		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			margin-right: 10px;
+			transition: color 1s;
+		}
+
+		nav ul li a:hover {
+			color: yellow;
+		}
+</style>
+</head>
+<nav>
+  <a href="/Index/Index.html"><img src="images/Logo.png" alt="Logo"></a>
+  <ul>
+			<li><a href="/Index/Index.html">Home</a></li>
+			<li><a href="/Comments/Comments.html"><font COLOR="#ffff00">Comments</font></a></li>
+			<li><a href="/shop/shop/index.html">Buy Products</a></li>
+			<li><a href="/Student_3/quiz.html">Quiz</a></li>
+			<li><a href="/Student_3/student-details.html">Student Details</a></li>
+			<li><a href="/Sitemap/Sitemap.html">Sitemap</a></li>
+			<li><a href="/Gallery/Gallery.html">Gallery</a></li>
+		</ul>
+  </ul>
+</nav>
+<body>
+
+<h2>Comments Form</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+
+    <label for="rating">How would you rate our service?</label>
+        <div id="rating-section" class="rating-scale">
+          <div class="rating-numbers">
+            <label for="rating-1">&nbsp;&nbsp;1</label>
+            <label for="rating-2">2</label>
+            <label for="rating-3">3</label>
+            <label for="rating-4">4</label>
+            <label for="rating-5">5</label>
+            <label for="rating-6">6</label>
+            <label for="rating-7">7</label>
+            <label for="rating-8">8</label>
+            <label for="rating-9">9</label>
+            <label for="rating-10">10</label>
+          </div>
+          <div class="rating-circles">
+            <input type="radio" name="rating" id="rating-1" value="1" required>
+            <input type="radio" name="rating" id="rating-2" value="2" required>
+            <input type="radio" name="rating" id="rating-3" value="3" required>
+            <input type="radio" name="rating" id="rating-4" value="4" required>
+            <input type="radio" name="rating" id="rating-5" value="5" required>
+            <input type="radio" name="rating" id="rating-6" value="6" required>
+            <input type="radio" name="rating" id="rating-7" value="7" required>
+            <input type="radio" name="rating" id="rating-8" value="8" required>
+            <input type="radio" name="rating" id="rating-9" value="9" required>
+            <input type="radio" name="rating" id="rating-10" value="10" required>
+          </div>
+        </div>
+      <br>
+    <label for="subject">Please could you tell us you reasons for giving this rating?</label>
+    <textarea id="subject" name="subject" placeholder="Write your reasons.." style="height:200px" required ></textarea>
+
+    <label for="dropdown">what did you think about user expirence of this web site? (optional)</label>
+    <select id="dropdown1" name="country" required>
+      <option value="" disabled selected>-- Please select --</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="dropdown">Which country are you from? (optional)</label>
+    <select id="dropdown2" name="country2" required>
+      <option value="" disabled selected>-- Please select --</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+    
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 200px;">
+      <input type="submit" value="Submit">
+    </div>
+    
+  </form>
+</div>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2023 SportSpot</p>
+    <p class="editor"><a href="\Editor Agrani\agrani.html">Editor : <span>Agrani A</span></a></p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
